@@ -1,5 +1,7 @@
 # ◈ OVERLORD — Linux Infrastructure Intelligence
 
+![OVERLORD Linux Intelligence cover](assets/overlord-cover.png)
+
 A runnable, local-first Linux control center built with FastAPI, psutil, SQLite, WebSockets, and vanilla JavaScript. **Version 1** includes live CPU and RAM charts, process inspection, systemd read-only inventory, Docker container read-only inventory, disk and network inspection, local threshold alerts, event timeline, point-in-time metadata snapshots, REST API, and data export. Responsive dark UI. No Node tooling required.
 
 ## Run on Fedora or Ubuntu (recommended: host-native)

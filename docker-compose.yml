@@ -1,0 +1,15 @@
+services:
+  overlord:
+    build: .
+    container_name: overlord
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8282:8282"
+    environment:
+      OVERLORD_TOKEN: "${OVERLORD_TOKEN:?Set OVERLORD_TOKEN in .env}"
+    volumes:
+      - overlord-data:/srv/overlord/data
+    # Containers are isolated. Host systemd and host Docker CLI will not be visible.
+    # Run the Python version directly on the host for full host-level telemetry.
+volumes:
+  overlord-data:
